@@ -19,9 +19,9 @@ export interface BlogPost {
 // 博客文章数据
 export const blogPosts: BlogPost[] = [
   {
-    slug: "riftrunner-gemini-3-lmarena-rumor-battle-math-test",
+    slug: "riftrunner-gemini-3-lmarena-rumor-battle-derivation",
     title: "Hunting for \"riftrunner\" on LMArena: Gemini 3.0 Rumor + Battle Derivation",
-    description: "Chased the rumor that Gemini 3.0 hides as riftrunner on LMArena. Here's the battle-mode derivation, the recurrence proof, and why the response felt different.",
+    description: "Chased the rumor that Gemini 3.0 hides as riftrunner on LMArena. Battle-mode derivation walkthrough on the cosine-power recurrence and why riftrunner felt sharper.",
     author: "RiftRunner Team",
     publishDate: "2025-04-15",
     lastModified: "2025-04-15",
@@ -32,48 +32,47 @@ export const blogPosts: BlogPost[] = [
     content: `
 <h1>Hunting for "riftrunner" on LMArena: Gemini 3.0 Rumor + Battle Derivation</h1>
 
-<blockquote>听到传言：在 LMArena 里有个叫 “riftrunner” 的隐藏模型可能就是 Gemini 3.0。我在 Battle 模式里反复排队，终于遇到它，然后扔了一个微积分递推公式。</blockquote>
+<blockquote>Rumor: <strong>Gemini 3.0</strong> is hiding on LMArena under the codename <strong>riftrunner</strong>. I camped in Battle mode until riftrunner appeared, then threw a calculus recurrence at it to see how it reasons.</blockquote>
 
-<h2>为什么在意</h2>
+<h2>Why this matters</h2>
 <ul>
-  <li>LMArena 偶尔会把实验模型藏在代号里。</li>
-  <li>“riftrunner” 据说在步骤化推导（尤其是数学）上更稳。</li>
-  <li>如果属实，可能是 Gemini 3.0 的早期窗口。</li>
+  <li>LMArena sometimes ships experimental models under code names.</li>
+  <li>Reports say <strong>riftrunner</strong> is stronger at stepwise math derivations.</li>
+  <li>If true, this could be an early look at Gemini 3.0's reasoning upgrades.</li>
 </ul>
 
-<h2>操作流程</h2>
+<h2>What I did</h2>
 <ol>
-  <li>进入 Battle，等到右侧匹配到 “riftrunner”。</li>
-  <li>双方同时给出同一个微积分递推题，主打推导过程。</li>
-  <li>只比推导和整合步骤，不比最终数值。</li>
+  <li>Stayed in Battle until the right-hand side showed <strong>riftrunner</strong>.</li>
+  <li>Prompted both sides with the same integral recurrence to stress symbolic reasoning.</li>
+  <li>Judged on derivation steps and algebra hygiene, not just final values.</li>
 </ol>
 
-<h3>出题（递推公式）</h3>
-<p>证明：对
-<code>I_n = \\int_{0}^{\\pi/2} x \\cos^n x \\, dx</code>，有
-<code>I_n = ((n-1)/n) I_{n-2} - 1/n^2</code></p>
-<p><img src="/blog/riftrunner-gemini-3-lmarena-rumor-battle-math-test/math-problem.png" alt="微积分递推题图" /></p>
+<h3>The problem (reduction formula)</h3>
+<p>Show that for <code>I_n = \\int_{0}^{\\pi/2} x \\cos^n x \\, dx</code>:</p>
+<p><code>I_n = ((n-1)/n) I_{n-2} - 1/n^2</code></p>
+<p><img src="/blog/riftrunner-gemini-3-lmarena-rumor-battle-derivation/001.png" alt="Cosine power reduction problem used for riftrunner test" /></p>
 
-<h2>“riftrunner” 的推导要点</h2>
+<h2>How riftrunner solved it (key moves)</h2>
 <ol>
-  <li>分部积分：取 <code>u = x</code>，<code>dv = \\cos^n x\\,dx</code>，边界项为 0，剩下 <code>I_n = -(1/n) \\int_{0}^{\\pi/2} x \\cos^{n-1}x \\sin x \\, dx</code>。</li>
-  <li>把积分拆成两部分：一部分提取 <code>x</code> 做递推，另一部分对 <code>\\cos^{n-1}x</code> 求导后用 <code>I_{n-2}</code> 的形式重写。</li>
-  <li>合并得 <code>I_n = -(1/n) + (n-1)I_{n-2} - (n-1)I_n</code>。</li>
-  <li>移项并整理：<code>I_n + (n-1)I_n = (n-1)I_{n-2} - 1/n</code>。</li>
-  <li>两边同时除以 <code>n</code>：<code>I_n = ((n-1)/n) I_{n-2} - 1/n^2</code>，收尾。</li>
+  <li>Integration by parts with <code>u = x</code>, <code>dv = \\cos^n x\\,dx</code>; boundary term is 0, leaving <code>-(1/n) \\int_{0}^{\\pi/2} x \\cos^{n-1}x \\sin x \\, dx</code>.</li>
+  <li>Split the remaining integral: one part factors out <code>x</code> for recurrence, the other rewrites <code>\\cos^{n-1}x</code> in terms of <code>I_{n-2}</code> after differentiation.</li>
+  <li>Combine to get <code>I_n = -(1/n) + (n-1)I_{n-2} - (n-1)I_n</code>.</li>
+  <li>Group like terms: <code>I_n + (n-1)I_n = (n-1)I_{n-2} - 1/n</code>.</li>
+  <li>Divide by <code>n</code>: <code>I_n = ((n-1)/n) I_{n-2} - 1/n^2</code>. Done.</li>
 </ol>
 
-<p><img src="/blog/riftrunner-gemini-3-lmarena-rumor-battle-math-test/battle-screenshot.png" alt="Battle 模式推导截图复刻" /></p>
+<p><img src="/blog/riftrunner-gemini-3-lmarena-rumor-battle-derivation/002.png" alt="Battle view showing riftrunner derivation steps" /></p>
 
-<h2>感觉上的差异</h2>
+<h2>What felt different about riftrunner</h2>
 <ul>
-  <li>提前整体提取了 <code>I_n</code>，再除以 <code>n</code>，避免符号走丢。</li>
-  <li>几乎没有走弯路，连贯地把 Part A/B 合回去。</li>
-  <li>结尾很“教材风”，直接给出递推式并收尾。</li>
+  <li>Clean factor handling: pulled <code>I_n</code> to one side before dividing, avoiding sign slips.</li>
+  <li>Fewer dead ends: minimal backtracking vs. other models that stalled mid-derivation.</li>
+  <li>Textbook finish: concise recurrence and tidy Q.E.D.-style wrap.</li>
 </ul>
 
-<h2>结论 & 下一步</h2>
-<p>这次实验性的战斗推导里，“riftrunner” 把递推式稳稳写完，体验比常见模型更像“刷习题”的感觉。如果想复现，继续在 Battle 模式等到 “riftrunner”，丢更多积分/级数的推导题，看看优势是否持续。</p>
+<h2>Takeaways</h2>
+<p>This small Battle-mode trial hints that <strong>riftrunner</strong>—if it’s really Gemini 3.0—has tighter symbolic reasoning. To replicate, wait for riftrunner in Battle, then test tougher integrals or series proofs to see if the edge holds.</p>
 `,
   },
   {
