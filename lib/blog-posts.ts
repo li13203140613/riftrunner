@@ -19,6 +19,64 @@ export interface BlogPost {
 // 博客文章数据
 export const blogPosts: BlogPost[] = [
   {
+    slug: "riftrunner-gemini-3-lmarena-rumor-battle-math-test",
+    title: "Hunting for \"riftrunner\" on LMArena: Gemini 3.0 Rumor + Battle Derivation",
+    description: "Chased the rumor that Gemini 3.0 hides as riftrunner on LMArena. Here's the battle-mode derivation, the recurrence proof, and why the response felt different.",
+    author: "RiftRunner Team",
+    publishDate: "2025-04-15",
+    lastModified: "2025-04-15",
+    tags: ["Gemini 3.0", "Riftrunner", "LMArena", "Battle Mode", "Math Derivation", "AI Rumor"],
+    category: "AI Experiments",
+    readingTime: 7,
+    featured: true,
+    content: `
+<h1>Hunting for "riftrunner" on LMArena: Gemini 3.0 Rumor + Battle Derivation</h1>
+
+<blockquote>听到传言：在 LMArena 里有个叫 “riftrunner” 的隐藏模型可能就是 Gemini 3.0。我在 Battle 模式里反复排队，终于遇到它，然后扔了一个微积分递推公式。</blockquote>
+
+<h2>为什么在意</h2>
+<ul>
+  <li>LMArena 偶尔会把实验模型藏在代号里。</li>
+  <li>“riftrunner” 据说在步骤化推导（尤其是数学）上更稳。</li>
+  <li>如果属实，可能是 Gemini 3.0 的早期窗口。</li>
+</ul>
+
+<h2>操作流程</h2>
+<ol>
+  <li>进入 Battle，等到右侧匹配到 “riftrunner”。</li>
+  <li>双方同时给出同一个微积分递推题，主打推导过程。</li>
+  <li>只比推导和整合步骤，不比最终数值。</li>
+</ol>
+
+<h3>出题（递推公式）</h3>
+<p>证明：对
+<code>I_n = \\int_{0}^{\\pi/2} x \\cos^n x \\, dx</code>，有
+<code>I_n = ((n-1)/n) I_{n-2} - 1/n^2</code></p>
+<p><img src="/blog/riftrunner-gemini-3-lmarena-rumor-battle-math-test/math-problem.png" alt="微积分递推题图" /></p>
+
+<h2>“riftrunner” 的推导要点</h2>
+<ol>
+  <li>分部积分：取 <code>u = x</code>，<code>dv = \\cos^n x\\,dx</code>，边界项为 0，剩下 <code>I_n = -(1/n) \\int_{0}^{\\pi/2} x \\cos^{n-1}x \\sin x \\, dx</code>。</li>
+  <li>把积分拆成两部分：一部分提取 <code>x</code> 做递推，另一部分对 <code>\\cos^{n-1}x</code> 求导后用 <code>I_{n-2}</code> 的形式重写。</li>
+  <li>合并得 <code>I_n = -(1/n) + (n-1)I_{n-2} - (n-1)I_n</code>。</li>
+  <li>移项并整理：<code>I_n + (n-1)I_n = (n-1)I_{n-2} - 1/n</code>。</li>
+  <li>两边同时除以 <code>n</code>：<code>I_n = ((n-1)/n) I_{n-2} - 1/n^2</code>，收尾。</li>
+</ol>
+
+<p><img src="/blog/riftrunner-gemini-3-lmarena-rumor-battle-math-test/battle-screenshot.png" alt="Battle 模式推导截图复刻" /></p>
+
+<h2>感觉上的差异</h2>
+<ul>
+  <li>提前整体提取了 <code>I_n</code>，再除以 <code>n</code>，避免符号走丢。</li>
+  <li>几乎没有走弯路，连贯地把 Part A/B 合回去。</li>
+  <li>结尾很“教材风”，直接给出递推式并收尾。</li>
+</ul>
+
+<h2>结论 & 下一步</h2>
+<p>这次实验性的战斗推导里，“riftrunner” 把递推式稳稳写完，体验比常见模型更像“刷习题”的感觉。如果想复现，继续在 Battle 模式等到 “riftrunner”，丢更多积分/级数的推导题，看看优势是否持续。</p>
+`,
+  },
+  {
     slug: "gemini-3-pro-riftrunner-kingbench-results",
     title: "Gemini 3.0 Pro (Riftrunner) KingBench Performance Analysis",
     description: "Detailed analysis of Gemini 3.0 Pro (Riftrunner) performance on KingBench AI coding benchmark. Compare with Claude Sonnet 4.5, GPT-4, and other leading AI models.",
