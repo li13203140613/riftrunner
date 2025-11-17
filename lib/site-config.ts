@@ -7,7 +7,7 @@
 export const siteConfig = {
   // 网站URL - 部署时修改这里!
   // 例如: "https://yourdomain.com" 或 "https://your-app.vercel.app"
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://your-domain.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.riftrunner.cc",
 
   // 网站名称
   name: "RiftRunner",
