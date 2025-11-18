@@ -19,6 +19,56 @@ export interface BlogPost {
 // 博客文章数据
 export const blogPosts: BlogPost[] = [
   {
+    slug: "riftrunner-one-prompt-physics-experiment",
+    title: "One-Prompt Physics: Riftrunner Simulates a 10kg Ball vs 10kg Cotton Drop",
+    description: "With a single prompt, riftrunner on LMArena generated a gravity experiment: a 10kg ball and 10kg cotton falling from 100m. Here’s the video and why this matters for fast science visuals.",
+    author: "RiftRunner Team",
+    publishDate: "2025-11-18",
+    lastModified: "2025-11-18",
+    tags: ["riftrunner", "LMArena", "Gemini 3", "physics demo", "gravity", "AI video", "science visualization"],
+    category: "AI Experiments",
+    readingTime: 4,
+    featured: true,
+    content: `
+<h1>One-Prompt Physics: Riftrunner Simulates a 10kg Ball vs 10kg Cotton Drop</h1>
+
+<blockquote>Prompt: “A 10kg ball and 10kg of cotton drop simultaneously from 100 meters.” Riftrunner on LMArena turned it into a clean science visual in one go.</blockquote>
+
+<p>
+  <video controls preload="metadata" style="width:100%;max-width:900px;border-radius:12px;border:1px solid rgba(255,255,255,0.1)">
+    <source src="/videos/777.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <br />
+  <small>Gravity demo: equal mass, different density, same drop height.</small>
+</p>
+
+<h2>Why this is interesting</h2>
+<ul>
+  <li><strong>Physics intuition:</strong> mass is equal, drag differs; outcome depends on air resistance, not weight alone.</li>
+  <li><strong>Rapid science visualization:</strong> one prompt produced a usable clip for teaching/demo.</li>
+  <li><strong>Consistency:</strong> riftrunner kept camera, timing, and scale coherent through the fall.</li>
+</ul>
+
+<h2>What riftrunner did well</h2>
+<ul>
+  <li><strong>Ground plane & scale:</strong> clear 100m context avoids “floating” artifacts.</li>
+  <li><strong>Motion clarity:</strong> cotton shows drag-influenced descent; ball stays ballistic.</li>
+  <li><strong>Framing:</strong> neutral background makes the physics point, not the styling.</li>
+</ul>
+
+<h2>How to prompt for similar science clips</h2>
+<ul>
+  <li>State masses, materials, height, and camera framing in one sentence.</li>
+  <li>Add one constraint about timing (“full fall in N seconds”) to keep pacing steady.</li>
+  <li>Prefer neutral lighting/background so the motion is the focus.</li>
+</ul>
+
+<h2>Bottom line</h2>
+<p><strong>Riftrunner</strong> on <strong>LMArena</strong> makes fast physics explainers practical: one concise prompt yields a teaching-ready video that spotlights gravity, drag, and mass intuition without manual editing.</p>
+`,
+  },
+  {
     slug: "riftrunner-mate-in-2-chess-puzzle-vs-claude",
     title: "Riftrunner Cracks a Mate-in-2 Chess Puzzle: Outsmarts Claude 4.5",
     description: "An unusually hard mate-in-2 chess puzzle forced deep planning before coding. Riftrunner on LMArena crushed the attempt, outperforming Claude 4.5.",
