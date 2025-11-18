@@ -19,6 +19,63 @@ export interface BlogPost {
 // 博客文章数据
 export const blogPosts: BlogPost[] = [
   {
+    slug: "riftrunner-lmarena-outstanding-performance-video",
+    title: "Riftrunner on LMArena: Outstanding Performance (Video Walkthrough)",
+    description: "Riftrunner on LMArena shows outstanding performance. See the full run, learn why Gemini 3 + riftrunner feels sharper, and how to prompt for consistent wins.",
+    author: "RiftRunner Team",
+    publishDate: "2025-11-17",
+    lastModified: "2025-11-17",
+    tags: ["riftrunner", "LMArena", "Gemini 3", "AI performance", "Battle Mode", "video run", "AI benchmarks"],
+    category: "AI Experiments",
+    readingTime: 4,
+    featured: true,
+    content: `
+<h1>Riftrunner on LMArena: Outstanding Performance (Video Walkthrough)</h1>
+
+<blockquote>Riftrunner on LMArena keeps delivering crisp solutions with stable reasoning. Here’s the run I captured and the prompts that made it shine.</blockquote>
+
+<p>
+  <video controls preload="metadata" style="width:100%;max-width:900px;border-radius:12px;border:1px solid rgba(255,255,255,0.1)">
+    <source src="/videos/4444.mp4" type="video/mp4">
+    Your browser does not support the video tag. 
+  </video>
+  <br />
+  <small>Full clip from LMArena showing riftrunner’s response flow.</small>
+</p>
+
+<h2>Why it stands out</h2>
+<ul>
+  <li><strong>Reasoning stability:</strong> step-by-step layout with minimal backtracking.</li>
+  <li><strong>Latency balance:</strong> quick enough for Battle Mode while keeping structure.</li>
+  <li><strong>Style adaptability:</strong> switches tone and formatting cleanly between code-style and narrative responses.</li>
+</ul>
+
+<h2>Prompt pattern I used</h2>
+<ul>
+  <li>Open with a concise instruction: scope, constraints, and target output format.</li>
+  <li>Add one guardrail about brevity to avoid overlong replies.</li>
+  <li>Keep examples short so riftrunner fills the structure rather than copying.</li>
+</ul>
+
+<h2>Highlights from the run</h2>
+<ul>
+  <li><strong>Clarity:</strong> bullet-first summaries before diving into details.</li>
+  <li><strong>Consistency:</strong> stable headings and inline formatting that make scanning easy.</li>
+  <li><strong>Recovery:</strong> when ambiguity appeared, it asked for a quick clarification instead of guessing.</li>
+</ul>
+
+<h2>Takeaways for your own prompts</h2>
+<ul>
+  <li>Declare the goal, constraints, and output shape up front.</li>
+  <li>Push for concise structure (headings + bullets) to keep answers readable.</li>
+  <li>For deeper reasoning, add one line about checking edge cases before finalizing.</li>
+</ul>
+
+<h2>Bottom line</h2>
+<p><strong>Riftrunner</strong> on <strong>LMArena</strong> feels like Gemini 3 tuned for dependable, fast reasoning. If you need consistent Battle Mode wins with clean formatting, this combo is hard to beat.</p>
+`,
+  },
+  {
     slug: "gemini-3-riftrunner-3d-fox-modeling-comparison",
     title: "Gemini 3 + riftrunner on LMArena: 3D Fox Modeling vs SOTA",
     description: "I asked riftrunner on LMArena to generate a 3D fox and compared it with other state-of-the-art models. Early signal: Gemini 3 + riftrunner shows promising shape fidelity and mesh cleanliness.",
