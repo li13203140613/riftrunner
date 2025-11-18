@@ -1,16 +1,19 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import { getUrl } from "@/lib/site-config";
+
+const pageUrl = getUrl("/privacy");
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "Privacy policy for RiftRunner AI Animation Generator. Learn how we protect your data and respect your privacy when using our free AI animation tool.",
   alternates: {
-    canonical: "https://riftrunner.online/privacy",
+    canonical: pageUrl,
   },
   openGraph: {
     title: "Privacy Policy - RiftRunner",
     description: "Privacy policy for RiftRunner AI Animation Generator",
-    url: "https://riftrunner.online/privacy",
+    url: pageUrl,
     type: "website",
   },
   robots: {

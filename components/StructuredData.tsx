@@ -87,7 +87,7 @@ export default function StructuredData() {
       // FAQ结构化数据
       {
         "@type": "FAQPage",
-        "@id": "https://riftrunner.online/#faqpage",
+        "@id": `${siteConfig.url}/#faqpage`,
         "mainEntity": [
           {
             "@type": "Question",
@@ -126,13 +126,13 @@ export default function StructuredData() {
       // 面包屑导航
       {
         "@type": "BreadcrumbList",
-        "@id": "https://riftrunner.online/#breadcrumb",
+        "@id": `${siteConfig.url}/#breadcrumb`,
         "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://riftrunner.online"
+            "item": siteConfig.url
           }
         ]
       }

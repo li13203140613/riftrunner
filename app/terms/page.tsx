@@ -1,16 +1,19 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import { getUrl } from "@/lib/site-config";
+
+const pageUrl = getUrl("/terms");
 
 export const metadata: Metadata = {
   title: "Terms of Service",
   description: "Terms of service for RiftRunner AI Animation Generator. Read our terms and conditions for using our free AI-powered animation creation platform.",
   alternates: {
-    canonical: "https://riftrunner.online/terms",
+    canonical: pageUrl,
   },
   openGraph: {
     title: "Terms of Service - RiftRunner",
     description: "Terms of service for RiftRunner AI Animation Generator",
-    url: "https://riftrunner.online/terms",
+    url: pageUrl,
     type: "website",
   },
   robots: {
