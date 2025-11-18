@@ -4,6 +4,7 @@ import Features from "@/components/Features";
 import HowItWorks from "@/components/HowItWorks";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
+import BlogPreview from "@/components/BlogPreview";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Examples />
       <Features />
       <HowItWorks />
+      <BlogPreview />
       <FAQ />
       <Footer />
     </main>

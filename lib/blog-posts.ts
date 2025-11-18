@@ -19,6 +19,110 @@ export interface BlogPost {
 // 博客文章数据
 export const blogPosts: BlogPost[] = [
   {
+    slug: "riftrunner-mate-in-2-chess-puzzle-vs-claude",
+    title: "Riftrunner Cracks a Mate-in-2 Chess Puzzle: Outsmarts Claude 4.5",
+    description: "An unusually hard mate-in-2 chess puzzle forced deep planning before coding. Riftrunner on LMArena crushed the attempt, outperforming Claude 4.5.",
+    author: "RiftRunner Team",
+    publishDate: "2025-11-18",
+    lastModified: "2025-11-18",
+    tags: ["riftrunner", "LMArena", "Gemini 3", "chess puzzle", "Claude 4.5", "AI reasoning"],
+    category: "AI Experiments",
+    readingTime: 5,
+    featured: true,
+    content: `
+<h1>Riftrunner Cracks a Mate-in-2 Chess Puzzle: Outsmarts Claude 4.5</h1>
+
+<blockquote>This was an insanely difficult task for an LLM: build a mate-in-2 chess puzzle, think like a chess player before coding, and avoid tactical traps. Riftrunner on LMArena delivered; Claude 4.5 stalled.</blockquote>
+
+<p>
+  <video controls preload="metadata" style="width:100%;max-width:900px;border-radius:12px;border:1px solid rgba(255,255,255,0.1)">
+    <source src="/videos/555555.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <br />
+  <small>LMArena run showing riftrunner’s reasoning path and final mate-in-2 construction.</small>
+</p>
+
+<h2>Why this puzzle is hard for LLMs</h2>
+<ul>
+  <li>Needs full-board reasoning and pruning non-forcing lines.</li>
+  <li>Demands consistency between move generation and final FEN output.</li>
+  <li>Requires verifying “only line” mates, not just flashy checks.</li>
+</ul>
+
+<h2>What riftrunner did differently</h2>
+<ul>
+  <li><strong>Plan-then-code:</strong> laid out threat + defensive resources before encoding moves.</li>
+  <li><strong>Constraint checks:</strong> verified no dual solutions and protected against stalemate sidesteps.</li>
+  <li><strong>Clean notation:</strong> SAN + FEN stayed aligned, simplifying validation.</li>
+</ul>
+
+<h2>Outcome vs Claude 4.5</h2>
+<ul>
+  <li><strong>Riftrunner:</strong> produced a legal mate-in-2 with forcing lines explained.</li>
+  <li><strong>Claude 4.5:</strong> drifted into non-forcing checks and inconsistent board states.</li>
+  <li><strong>Takeaway:</strong> riftrunner feels tuned for structured reasoning on tight combinatorial tasks.</li>
+</ul>
+
+<h2>Tips to replicate</h2>
+<ul>
+  <li>Ask for the plan first: threat, key squares, and opponent replies.</li>
+  <li>Request legality checks and a final FEN/SAN pair for validation.</li>
+  <li>Keep the prompt short—clarity beats verbosity for chess reasoning.</li>
+</ul>
+`,
+  },
+  {
+    slug: "riftrunner-clone-cut-the-rope-lmarena",
+    title: "Riftrunner Clones Cut the Rope in LMArena",
+    description: "Riftrunner on LMArena recreated a Cut the Rope-style mini-game, showing quick game-loop reasoning and tidy code scaffolding.",
+    author: "RiftRunner Team",
+    publishDate: "2025-11-18",
+    lastModified: "2025-11-18",
+    tags: ["riftrunner", "LMArena", "Gemini 3", "game clone", "Cut the Rope", "AI coding"],
+    category: "AI Experiments",
+    readingTime: 4,
+    featured: true,
+    content: `
+<h1>Riftrunner Clones Cut the Rope in LMArena</h1>
+
+<blockquote>Asked riftrunner to build a Cut the Rope-like mini-game inside LMArena. It delivered a clean physics loop, scoring, and UI hooks without heavy refactoring.</blockquote>
+
+<p>
+  <video controls preload="metadata" style="width:100%;max-width:900px;border-radius:12px;border:1px solid rgba(255,255,255,0.1)">
+    <source src="/videos/6666666.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <br />
+  <small>Gameplay clip: rope cutting, candy fall, star pickup, and goal detection working end-to-end.</small>
+</p>
+
+<h2>What riftrunner built</h2>
+<ul>
+  <li><strong>Physics loop:</strong> rope segments + gravity with stable collision checks.</li>
+  <li><strong>Scoring model:</strong> star pickups tracked separately from goal completion.</li>
+  <li><strong>UI hooks:</strong> restart and level reset baked in for quick iteration.</li>
+</ul>
+
+<h2>Why it matters</h2>
+<ul>
+  <li>Shows riftrunner (Gemini 3) can ship playable loops fast.</li>
+  <li>Code arrives organized for extension—levels, assets, and effects slot in easily.</li>
+  <li>Good for prototyping interactive demos without a full engine stack.</li>
+</ul>
+
+<h2>Prompting tips</h2>
+<ul>
+  <li>Define mechanics first: rope cut, gravity, goals, and collectibles.</li>
+  <li>Ask for event hooks to extend later (sound, particles, level data).</li>
+  <li>Keep assets abstract; focus on physics correctness before polish.</li>
+</ul>
+
+<h2>Bottom line</h2>
+<p><strong>Riftrunner</strong> on <strong>LMArena</strong> handled a casual game clone cleanly. For teams needing fast prototypes, this response shows why Gemini 3 is a strong coding copilot.</p>
+`,
+  },
+  {
     slug: "riftrunner-lmarena-outstanding-performance-video",
     title: "Riftrunner on LMArena: Outstanding Performance (Video Walkthrough)",
     description: "Riftrunner on LMArena shows outstanding performance. See the full run, learn why Gemini 3 + riftrunner feels sharper, and how to prompt for consistent wins.",
